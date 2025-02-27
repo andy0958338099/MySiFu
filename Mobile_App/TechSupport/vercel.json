@@ -1,14 +1,7 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "vercel.sh",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
+  "buildCommand": "CI=false npm run vercel-build",
+  "outputDirectory": "build",
   "routes": [
     { "handle": "filesystem" },
     { "src": "/.*", "dest": "/index.html" }

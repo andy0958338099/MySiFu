@@ -1,7 +1,26 @@
 {
-  "buildCommand": "./vercel-build.sh",
-  "outputDirectory": "build",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "vercel.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*\\.(js|json|css|ico|png|jpg|jpeg|svg|webp|gif))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }

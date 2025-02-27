@@ -7,9 +7,9 @@ echo "Current directory: $(pwd)"
 echo "Installing dependencies..."
 npm install
 
-# Build application
+# Build application directly using react-scripts
 echo "Building application..."
-CI=false npm run build
+CI=false ./node_modules/.bin/react-scripts build
 
 # Copy _redirects file to build directory
 echo "Copying _redirects file to build directory..."

@@ -1,8 +1,7 @@
 {
-  "framework": "create-react-app",
-  "buildCommand": "CI=false npm run build",
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+  "buildCommand": "./vercel-build.sh",
+  "outputDirectory": "build",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

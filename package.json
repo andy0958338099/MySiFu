@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@chakra-ui/react": "^3.8.1",
+    "@supabase/supabase-js": "^2.49.1",
+    "react-native-dotenv": "^3.4.11",
+    "tabler-icons-react": "^1.56.0"
+  }
+}

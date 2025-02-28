@@ -34,6 +34,7 @@
     "build": "react-scripts build",
     "vercel-build": "CI=false react-scripts build && cp public/_redirects build/",
     "vercel": "bash vercel.sh",
+    "vercel-simple": "node vercel-build-simple.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "preinstall": "npx npm-force-resolutions"

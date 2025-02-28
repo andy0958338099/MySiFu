@@ -5,23 +5,14 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build",
-        "buildCommand": "npm run vercel"
+        "buildCommand": "npm run vercel-simple",
+        "outputDirectory": "build"
       }
     }
   ],
   "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*\\.(js|json|css|ico|png|jpg|jpeg|svg|webp|gif))",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "src": "/static/(.*)", "dest": "/static/$1" },
+    { "src": "/(.*\\.(js|json|css|ico|png|jpg|jpeg|svg|webp|gif))", "dest": "/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
